@@ -28,7 +28,7 @@ namespace Journey.Infrastructure.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Activity",
+                name: "Activities",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
@@ -39,9 +39,9 @@ namespace Journey.Infrastructure.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Activity", x => x.Id);
+                    table.PrimaryKey("PK_Activities", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Activity_Trips_TripId",
+                        name: "FK_Activities_Trips_TripId",
                         column: x => x.TripId,
                         principalTable: "Trips",
                         principalColumn: "Id",
@@ -53,26 +53,26 @@ namespace Journey.Infrastructure.Data.Migrations
                 columns: new[] { "Id", "EndDate", "Name", "StartDate" },
                 values: new object[,]
                 {
-                    { new Guid("4d598a32-27a0-48b2-9d4f-631022b81841"), new DateTime(2024, 7, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Viagem a Paris", new DateTime(2024, 7, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { new Guid("a31b64f8-54c3-467c-995e-c0b0e463ec67"), new DateTime(2024, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "Viagem ao Japão", new DateTime(2024, 8, 15, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                    { new Guid("b01dfe10-8d9d-4b30-9074-25eaf4ac6b3f"), new DateTime(2024, 7, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Viagem a Paris", new DateTime(2024, 7, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { new Guid("c47f61e0-5e44-4589-99cd-42144e3ec2e6"), new DateTime(2024, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "Viagem ao Japão", new DateTime(2024, 8, 15, 0, 0, 0, 0, DateTimeKind.Unspecified) }
                 });
 
             migrationBuilder.InsertData(
-                table: "Activity",
+                table: "Activities",
                 columns: new[] { "Id", "Date", "Name", "Status", "TripId" },
                 values: new object[,]
                 {
-                    { new Guid("57d2df16-2c71-4190-9f73-30325fecd214"), new DateTime(2024, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "Visita a Tokyo Tower", 0, new Guid("a31b64f8-54c3-467c-995e-c0b0e463ec67") },
-                    { new Guid("5b3d712d-dd58-45f4-bf11-1487a5c8417f"), new DateTime(2024, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "Visita a Kyoto", 0, new Guid("4d598a32-27a0-48b2-9d4f-631022b81841") },
-                    { new Guid("7376c29d-2a7e-4b57-8f15-107ffe44c6b1"), new DateTime(2024, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "Passeio em Shibuya", 0, new Guid("a31b64f8-54c3-467c-995e-c0b0e463ec67") },
-                    { new Guid("a34dede2-7489-4e80-944d-4a25b6198966"), new DateTime(2024, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "Cruzamento no Rio Sena", 0, new Guid("4d598a32-27a0-48b2-9d4f-631022b81841") },
-                    { new Guid("b11cd790-4656-4249-ac59-ac1842a40f4f"), new DateTime(2024, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "Visita a Kyoto", 0, new Guid("a31b64f8-54c3-467c-995e-c0b0e463ec67") },
-                    { new Guid("d1400573-70f3-4af7-b895-a5e87a0e0f03"), new DateTime(2024, 7, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "Visita a Torre Eiffel", 0, new Guid("4d598a32-27a0-48b2-9d4f-631022b81841") }
+                    { new Guid("97a72555-d2aa-440d-9499-f5f307e62d18"), new DateTime(2024, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "Cruzamento no Rio Sena", 0, new Guid("b01dfe10-8d9d-4b30-9074-25eaf4ac6b3f") },
+                    { new Guid("9c5d9336-ccc7-4683-b1f6-651bdd28bbbe"), new DateTime(2024, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "Visita a Kyoto", 0, new Guid("c47f61e0-5e44-4589-99cd-42144e3ec2e6") },
+                    { new Guid("b7df654c-b71e-408b-8ad9-a5dc03c544c0"), new DateTime(2024, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "Visita a Kyoto", 0, new Guid("b01dfe10-8d9d-4b30-9074-25eaf4ac6b3f") },
+                    { new Guid("c5b3c55b-3b9f-44be-97e0-4cf14505bcca"), new DateTime(2024, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "Visita a Tokyo Tower", 0, new Guid("c47f61e0-5e44-4589-99cd-42144e3ec2e6") },
+                    { new Guid("cfdd3b41-4ba1-46de-ad2b-30ae54a36c23"), new DateTime(2024, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "Passeio em Shibuya", 0, new Guid("c47f61e0-5e44-4589-99cd-42144e3ec2e6") },
+                    { new Guid("d369011f-3621-47d5-bb23-72c19eb70fdf"), new DateTime(2024, 7, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "Visita a Torre Eiffel", 0, new Guid("b01dfe10-8d9d-4b30-9074-25eaf4ac6b3f") }
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Activity_TripId",
-                table: "Activity",
+                name: "IX_Activities_TripId",
+                table: "Activities",
                 column: "TripId");
         }
 
@@ -80,7 +80,7 @@ namespace Journey.Infrastructure.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Activity");
+                name: "Activities");
 
             migrationBuilder.DropTable(
                 name: "Trips");

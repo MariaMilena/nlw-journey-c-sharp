@@ -16,6 +16,8 @@ public class JourneyDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
+        modelBuilder.Entity<Activity>().ToTable("Activities");
+
         // Configurar relacionamento
         modelBuilder.Entity<Trip>()
             .HasMany(t => t.Activities)

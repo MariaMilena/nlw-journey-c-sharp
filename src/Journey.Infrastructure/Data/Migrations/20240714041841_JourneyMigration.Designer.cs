@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Journey.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(JourneyDbContext))]
-    [Migration("20240713043027_JourneyMigration")]
+    [Migration("20240714041841_JourneyMigration")]
     partial class JourneyMigration
     {
         /// <inheritdoc />
@@ -43,56 +43,56 @@ namespace Journey.Infrastructure.Data.Migrations
 
                     b.HasIndex("TripId");
 
-                    b.ToTable("Activity");
+                    b.ToTable("Activities");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("5b3d712d-dd58-45f4-bf11-1487a5c8417f"),
+                            Id = new Guid("b7df654c-b71e-408b-8ad9-a5dc03c544c0"),
                             Date = new DateTime(2024, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Visita a Kyoto",
                             Status = 0,
-                            TripId = new Guid("4d598a32-27a0-48b2-9d4f-631022b81841")
+                            TripId = new Guid("b01dfe10-8d9d-4b30-9074-25eaf4ac6b3f")
                         },
                         new
                         {
-                            Id = new Guid("d1400573-70f3-4af7-b895-a5e87a0e0f03"),
+                            Id = new Guid("d369011f-3621-47d5-bb23-72c19eb70fdf"),
                             Date = new DateTime(2024, 7, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Visita a Torre Eiffel",
                             Status = 0,
-                            TripId = new Guid("4d598a32-27a0-48b2-9d4f-631022b81841")
+                            TripId = new Guid("b01dfe10-8d9d-4b30-9074-25eaf4ac6b3f")
                         },
                         new
                         {
-                            Id = new Guid("a34dede2-7489-4e80-944d-4a25b6198966"),
+                            Id = new Guid("97a72555-d2aa-440d-9499-f5f307e62d18"),
                             Date = new DateTime(2024, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Cruzamento no Rio Sena",
                             Status = 0,
-                            TripId = new Guid("4d598a32-27a0-48b2-9d4f-631022b81841")
+                            TripId = new Guid("b01dfe10-8d9d-4b30-9074-25eaf4ac6b3f")
                         },
                         new
                         {
-                            Id = new Guid("57d2df16-2c71-4190-9f73-30325fecd214"),
+                            Id = new Guid("c5b3c55b-3b9f-44be-97e0-4cf14505bcca"),
                             Date = new DateTime(2024, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Visita a Tokyo Tower",
                             Status = 0,
-                            TripId = new Guid("a31b64f8-54c3-467c-995e-c0b0e463ec67")
+                            TripId = new Guid("c47f61e0-5e44-4589-99cd-42144e3ec2e6")
                         },
                         new
                         {
-                            Id = new Guid("7376c29d-2a7e-4b57-8f15-107ffe44c6b1"),
+                            Id = new Guid("cfdd3b41-4ba1-46de-ad2b-30ae54a36c23"),
                             Date = new DateTime(2024, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Passeio em Shibuya",
                             Status = 0,
-                            TripId = new Guid("a31b64f8-54c3-467c-995e-c0b0e463ec67")
+                            TripId = new Guid("c47f61e0-5e44-4589-99cd-42144e3ec2e6")
                         },
                         new
                         {
-                            Id = new Guid("b11cd790-4656-4249-ac59-ac1842a40f4f"),
+                            Id = new Guid("9c5d9336-ccc7-4683-b1f6-651bdd28bbbe"),
                             Date = new DateTime(2024, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Visita a Kyoto",
                             Status = 0,
-                            TripId = new Guid("a31b64f8-54c3-467c-995e-c0b0e463ec67")
+                            TripId = new Guid("c47f61e0-5e44-4589-99cd-42144e3ec2e6")
                         });
                 });
 
@@ -119,14 +119,14 @@ namespace Journey.Infrastructure.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("4d598a32-27a0-48b2-9d4f-631022b81841"),
+                            Id = new Guid("b01dfe10-8d9d-4b30-9074-25eaf4ac6b3f"),
                             EndDate = new DateTime(2024, 7, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Viagem a Paris",
                             StartDate = new DateTime(2024, 7, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            Id = new Guid("a31b64f8-54c3-467c-995e-c0b0e463ec67"),
+                            Id = new Guid("c47f61e0-5e44-4589-99cd-42144e3ec2e6"),
                             EndDate = new DateTime(2024, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Viagem ao Japão",
                             StartDate = new DateTime(2024, 8, 15, 0, 0, 0, 0, DateTimeKind.Unspecified)
